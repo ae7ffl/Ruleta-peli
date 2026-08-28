@@ -20,35 +20,41 @@ body {
 .app-header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
+  gap: 12px;
+  padding: 12px 16px;
   background: var(--card);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 5;
+  flex-wrap: wrap;
 }
 
 .app-header h1 {
-  font-size: 20px;
+  font-size: clamp(16px, 4.5vw, 20px);
   margin: 0;
   white-space: nowrap;
 }
 
 .tabs {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tab-btn {
   background: none;
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 10px 14px;
+  font-size: 13px;
   cursor: pointer;
   color: var(--muted);
+  white-space: nowrap;
+  min-height: 40px;
 }
 
 .tab-btn.active {
@@ -68,7 +74,7 @@ body {
 main {
   max-width: 500px;
   margin: 0 auto;
-  padding: 24px 16px 60px;
+  padding: 20px 14px 60px;
 }
 
 .tab-content { display: none; }
@@ -76,21 +82,28 @@ main {
 
 .wheel-wrap {
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: min(340px, 82vw);
+  height: min(340px, 82vw);
   margin: 0 auto 20px;
+}
+
+.wheel-wrap canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .wheel-hub {
   position: absolute;
   top: 50%; left: 50%;
-  width: 66px; height: 66px;
+  width: clamp(48px, 18vw, 66px);
+  height: clamp(48px, 18vw, 66px);
   border-radius: 50%;
   background: var(--card);
   border: 3px solid var(--accent-dark);
   transform: translate(-50%, -50%);
   display: flex; align-items: center; justify-content: center;
-  font-size: 28px;
+  font-size: clamp(20px, 6vw, 28px);
   overflow: hidden;
 }
 
@@ -114,11 +127,12 @@ main {
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 12px 28px;
+  padding: 14px 28px;
   border-radius: 999px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  min-height: 48px;
 }
 
 .primary-btn:hover { background: var(--accent-dark); }
@@ -139,10 +153,11 @@ main {
 
 .add-form input {
   flex: 1;
-  padding: 10px 12px;
+  padding: 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  font-size: 15px;
+  font-size: 16px;
+  min-height: 46px;
 }
 
 .add-form button {
@@ -150,9 +165,10 @@ main {
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 10px 16px;
+  padding: 10px 18px;
   font-size: 15px;
   cursor: pointer;
+  min-height: 46px;
 }
 
 .error-text {
@@ -193,8 +209,10 @@ main {
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 18px;
-  padding: 4px 6px;
+  font-size: 20px;
+  padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
 }
 
 .media-overlay {
@@ -213,23 +231,23 @@ main {
 
 .media-box {
   position: relative;
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 92vw;
+  max-height: 78vh;
 }
 
 .media-box video {
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 92vw;
+  max-height: 78vh;
   border-radius: 12px;
   display: block;
 }
 
 .media-close {
   position: absolute;
-  top: -14px; right: -14px;
-  width: 32px; height: 32px;
+  top: 8px; right: 8px;
+  width: 34px; height: 34px;
   border-radius: 50%;
-  background: #fff;
+  background: rgba(255,255,255,0.9);
   border: none;
   font-size: 16px;
   cursor: pointer;
