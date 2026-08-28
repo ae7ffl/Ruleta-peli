@@ -12,25 +12,25 @@
 const MEDIA_CONFIG = {
   // Cuando la ruleta para y sale una película elegida
   ruletaResultado: [
-    // "media/reaccion1.mp4",
-    // "media/reaccion2.mp4",
+     "media/random1.png",
+     "media/random2.mp4",
   ],
 
   // Cuando marcáis una película como vista (pasa de "Por ver" a "Vistas")
   peliculaVista: [
-    // "media/celebracion1.mp4",
-    // "media/baile.mp4",
+     "media/random1.png",
+     "media/random2.mp4",
   ],
 
   // Cuando la lista de "Por ver" se queda vacía
   listaVacia: [
-    // "media/sin-ideas.mp4",
+    "media/bifrutasPensando.png",
   ],
 
   // El botón sorpresa (🎲), en cualquier momento
   sorpresa: [
-    // "media/sorpresa1.mp4",
-    // "media/sorpresa2.mp4",
+     "media/random1.png",
+     "media/random2.mp4",
   ],
 };
 
