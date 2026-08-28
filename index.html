@@ -10,13 +10,6 @@
 
   <header class="app-header">
     <h1>🎬 Noche de pelis</h1>
-    <nav class="tabs">
-      <button class="tab-btn active" data-tab="ruleta">Ruleta</button>
-      <button class="tab-btn" data-tab="por-ver">Por ver</button>
-      <button class="tab-btn" data-tab="vistas">Vistas</button>
-      <button class="tab-btn" data-tab="resumen">Resumen</button>
-    </nav>
-    <button id="sorpresaBtn" class="surprise-btn" title="Sorpréndeme" aria-label="Botón sorpresa">🎲</button>
   </header>
 
   <main>
@@ -31,8 +24,6 @@
       <p id="spinResult" class="result-text"></p>
 
       <div class="quick-actions">
-        <button class="quick-btn" data-goto-tab="por-ver">📋 Por ver</button>
-        <button class="quick-btn" data-goto-tab="vistas">✅ Vistas</button>
         <button class="quick-btn" id="quickSorpresaBtn">🎲 Sorpréndeme</button>
       </div>
     </section>
@@ -59,6 +50,21 @@
     </section>
 
   </main>
+
+  <nav class="bottom-nav">
+    <button class="tab-btn active" data-tab="ruleta">
+      <span class="bn-icon">🎡</span><span class="bn-label">Ruleta</span>
+    </button>
+    <button class="tab-btn" data-tab="por-ver">
+      <span class="bn-icon">📋</span><span class="bn-label">Por ver</span>
+    </button>
+    <button class="tab-btn" data-tab="vistas">
+      <span class="bn-icon">✅</span><span class="bn-label">Vistas</span>
+    </button>
+    <button class="tab-btn" data-tab="resumen">
+      <span class="bn-icon">📊</span><span class="bn-label">Resumen</span>
+    </button>
+  </nav>
 
   <div id="mediaOverlay" class="media-overlay" hidden>
     <div class="media-box">

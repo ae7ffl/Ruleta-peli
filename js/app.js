@@ -12,10 +12,6 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => activarTab(btn.dataset.tab));
 });
 
-document.querySelectorAll('[data-goto-tab]').forEach(btn => {
-  btn.addEventListener('click', () => activarTab(btn.dataset.gotoTab));
-});
-
 document.getElementById('quickSorpresaBtn').addEventListener('click', () => {
   reproducirMedia('sorpresa');
 });
@@ -355,11 +351,6 @@ document.getElementById('spinBtn').addEventListener('click', () => {
     }
   }
   requestAnimationFrame(frame);
-});
-
-// ---------- Botón sorpresa (cabecera) ----------
-document.getElementById('sorpresaBtn').addEventListener('click', () => {
-  reproducirMedia('sorpresa');
 });
 
 // ---------- Utilidad ----------
