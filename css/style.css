@@ -207,6 +207,10 @@ main {
   z-index: 50;
 }
 
+.media-overlay[hidden] {
+  display: none;
+}
+
 .media-box {
   position: relative;
   max-width: 90vw;
@@ -229,8 +233,4 @@ main {
   border: none;
   font-size: 16px;
   cursor: pointer;
-}
-
-.media-overlay[hidden] {
-  display: none;
 }
