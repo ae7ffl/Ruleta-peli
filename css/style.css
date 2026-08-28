@@ -171,12 +171,14 @@ main {
 
 .add-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 8px;
 }
 
 .add-form input {
   flex: 1;
+  min-width: 120px;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
@@ -193,6 +195,170 @@ main {
   font-size: 15px;
   cursor: pointer;
   min-height: 46px;
+}
+
+.movie-subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.movie-list-item-vista {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vista-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ratings-summary {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.rate-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.rate-label {
+  color: var(--muted);
+  margin-right: 4px;
+}
+
+.star-row { display: inline-flex; }
+
+.star-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: #d9a441;
+  padding: 4px;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.nota-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  min-height: 42px;
+}
+
+.resumen-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resumen-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.resumen-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.estado-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.estado-vista {
+  background: #dff3e6;
+  color: #1D9E75;
+}
+
+.estado-por-ver {
+  background: #f4e6ea;
+  color: var(--accent-dark);
+}
+
+.resumen-detail {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.resumen-nota {
+  margin-top: 8px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text);
+}
+
+.quien-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+.quien-overlay[hidden] {
+  display: none;
+}
+
+.quien-box {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  width: min(280px, 85vw);
+}
+
+.quien-title {
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.quien-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.quien-btn {
+  flex: 1;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quien-cancel {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 13px;
+  cursor: pointer;
 }
 
 .error-text {

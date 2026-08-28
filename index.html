@@ -14,6 +14,7 @@
       <button class="tab-btn active" data-tab="ruleta">Ruleta</button>
       <button class="tab-btn" data-tab="por-ver">Por ver</button>
       <button class="tab-btn" data-tab="vistas">Vistas</button>
+      <button class="tab-btn" data-tab="resumen">Resumen</button>
     </nav>
     <button id="sorpresaBtn" class="surprise-btn" title="Sorpréndeme" aria-label="Botón sorpresa">🎲</button>
   </header>
@@ -28,11 +29,18 @@
       </div>
       <button id="spinBtn" class="primary-btn">Girar la ruleta ↻</button>
       <p id="spinResult" class="result-text"></p>
+
+      <div class="quick-actions">
+        <button class="quick-btn" data-goto-tab="por-ver">📋 Por ver</button>
+        <button class="quick-btn" data-goto-tab="vistas">✅ Vistas</button>
+        <button class="quick-btn" id="quickSorpresaBtn">🎲 Sorpréndeme</button>
+      </div>
     </section>
 
     <section id="tab-por-ver" class="tab-content">
       <form id="addForm" class="add-form">
         <input id="movieTitle" type="text" placeholder="Título de la película" autocomplete="off" required>
+        <input id="movieGenre" type="text" placeholder="Género (opcional)" autocomplete="off">
         <button type="submit">Añadir</button>
       </form>
       <p id="addError" class="error-text" hidden></p>
@@ -45,6 +53,11 @@
       <p id="vistasEmpty" class="empty-text" hidden>Aún no habéis visto ninguna. ¡A por la primera!</p>
     </section>
 
+    <section id="tab-resumen" class="tab-content">
+      <div id="resumenList" class="resumen-list"></div>
+      <p id="resumenEmpty" class="empty-text" hidden>Todavía no hay ninguna película añadida.</p>
+    </section>
+
   </main>
 
   <div id="mediaOverlay" class="media-overlay" hidden>
@@ -52,6 +65,17 @@
       <video id="mediaPlayer" playsinline hidden></video>
       <img id="mediaImage" alt="" hidden>
       <button id="mediaClose" class="media-close" aria-label="Cerrar">✕</button>
+    </div>
+  </div>
+
+  <div id="quienEresOverlay" class="quien-overlay" hidden>
+    <div class="quien-box">
+      <p class="quien-title">¿Quién eres?</p>
+      <div class="quien-btns">
+        <button class="quien-btn" data-persona="Andrea">Andrea</button>
+        <button class="quien-btn" data-persona="Lucía">Lucía</button>
+      </div>
+      <button id="quienCancel" class="quien-cancel">Cancelar</button>
     </div>
   </div>
 
