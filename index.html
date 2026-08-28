@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎬 Noche de pelis</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>🎬 Noche de pelis</h1>
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="ruleta">Ruleta</button>
+      <button class="tab-btn" data-tab="por-ver">Por ver</button>
+      <button class="tab-btn" data-tab="vistas">Vistas</button>
+    </nav>
+    <button id="sorpresaBtn" class="surprise-btn" title="Sorpréndeme" aria-label="Botón sorpresa">🎲</button>
+  </header>
+
+  <main>
+
+    <section id="tab-ruleta" class="tab-content active">
+      <div class="wheel-wrap">
+        <canvas id="wheelCanvas" width="340" height="340"></canvas>
+        <div id="wheelHub" class="wheel-hub">🎬</div>
+        <div class="wheel-pointer"></div>
+      </div>
+      <button id="spinBtn" class="primary-btn">Girar la ruleta ↻</button>
+      <p id="spinResult" class="result-text"></p>
+    </section>
+
+    <section id="tab-por-ver" class="tab-content">
+      <form id="addForm" class="add-form">
+        <input id="movieTitle" type="text" placeholder="Título de la película" autocomplete="off" required>
+        <button type="submit">Añadir</button>
+      </form>
+      <p id="addError" class="error-text" hidden></p>
+      <ul id="porVerList" class="movie-list"></ul>
+      <p id="porVerEmpty" class="empty-text" hidden>No hay pelis por ver todavía. ¡Añade alguna!</p>
+    </section>
+
+    <section id="tab-vistas" class="tab-content">
+      <ul id="vistasList" class="movie-list"></ul>
+      <p id="vistasEmpty" class="empty-text" hidden>Aún no habéis visto ninguna. ¡A por la primera!</p>
+    </section>
+
+  </main>
+
+  <div id="mediaOverlay" class="media-overlay" hidden>
+    <div class="media-box">
+      <video id="mediaPlayer" autoplay playsinline></video>
+      <button id="mediaClose" class="media-close" aria-label="Cerrar">✕</button>
+    </div>
+  </div>
+
+  <script src="js/jsonbin-config.js"></script>
+  <script src="js/data-store.js"></script>
+  <script src="js/media-config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
